@@ -2,6 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const request = require('superagent');
 const app = express();
+const cors = require('cors');
+
+app.use(cors());
 
 app.get('/', (req, res) => res.send('Jello World!'));
 
