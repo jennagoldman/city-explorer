@@ -71,7 +71,7 @@ const getTrailsData = async(latitude, longitude) => {
 app.get('/trails', async(req, res, next) => {
     try {
         const locationTrails = await getTrailsData(latitude, longitude);
-        res.json({ locationTrails });
+        res.json(locationTrails);
     } catch (err) {
         next(err);
     }
@@ -97,7 +97,7 @@ const getYelpData = async(latitude, longitude) => {
 app.get('/reviews', async(req, res, next) => {
     try {
         const locationBusinesses = await getYelpData(latitude, longitude);
-        res.json({ locationBusinesses });
+        res.json(locationBusinesses);
     } catch (err) {
         next(err);
     }
@@ -122,7 +122,7 @@ const getEventsData = async(latitude, longitude) => {
 app.get('/events', async(req, res, next) => {
     try {
         const locationEvents = await getEventsData(latitude, longitude);
-        res.json({ locationEvents });
+        res.json(locationEvents);
     } catch (err) {
         next(err);
     }

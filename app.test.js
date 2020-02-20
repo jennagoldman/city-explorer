@@ -18,4 +18,49 @@ describe('GET /location', () => {
             
             done();
         });
+    test('Test /weather response',
+        async(done) => {
+        
+            const response = await request(app)
+                .get('/weather');
+        
+            expect(response.body).toEqual([{
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            {
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            {
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            {
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            {
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            {
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            {
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            {
+                forecast: expect.any(String),
+                time: expect.any(String)
+            },
+            ]);
+        
+            expect(response.statusCode).toBe(200);
+        
+            done();
+        });
 });
+
