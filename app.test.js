@@ -1,12 +1,11 @@
 const { app } = require('./app.js');
 const request = require('supertest');
 
-describe('/GET /location', () => {
+describe('GET /location', () => {
     test('Test my API responses',
         async(done) => {
             
             const response = await request(app)
-                
                 .get('/location?search=portland');
             
             expect(response.body).toEqual({

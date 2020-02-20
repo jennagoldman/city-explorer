@@ -43,7 +43,7 @@ const getWeatherData = async(latitude, longitude) => {
 app.get('/weather', async(req, res, next) => {
     try {
         const locationWeather = await getWeatherData(latitude, longitude);
-        res.json({ locationWeather });
+        res.json(locationWeather);
     } catch (err) {
         next(err);
     }
